@@ -19,7 +19,7 @@ export default function MemoPage() {
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const monthKey = `${calendarMonth.getFullYear()}-${String(calendarMonth.getMonth() + 1).padStart(2, '0')}`
-  const { data: memo, isLoading } = useMemoData(selectedDate)
+  const { data: memo } = useMemoData(selectedDate)
   const { data: memoDates } = useMemoDates(monthKey)
 
   useEffect(() => {
@@ -145,17 +145,11 @@ export default function MemoPage() {
         </div>
 
         <div className="flex-1 overflow-auto p-4 md:p-6">
-          {isLoading ? (
-            <div className="flex items-center justify-center h-32 text-gray-400">
-              <Loader2 className="animate-spin mr-2" size={18} /> 로딩 중...
-            </div>
-          ) : (
-            <MemoEditor
-              key={selectedDate}
-              content={memo?.content ?? ''}
-              onChange={handleChange}
-            />
-          )}
+          <MemoEditor
+            key={selectedDate}
+            content={memo?.content ?? ''}
+            onChange={handleChange}
+          />
         </div>
       </div>
     </div>
