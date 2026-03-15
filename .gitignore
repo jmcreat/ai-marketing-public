@@ -1,0 +1,5 @@
+frontend-local/node_modules/
+frontend-local/dist/
+frontend-local/.vite/
+frontend-local/dev-dist/
+frontend-local/.env.local

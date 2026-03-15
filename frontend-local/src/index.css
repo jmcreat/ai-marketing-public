@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+  }
+}
+
+/* FullCalendar custom styles */
+.fc .fc-button {
+  @apply !bg-blue-500 !border-blue-500 !text-white hover:!bg-blue-600 !rounded-md !px-3 !py-1.5 !text-sm !font-medium;
+}
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  @apply !bg-blue-700 !border-blue-700;
+}
+.fc .fc-toolbar-title {
+  @apply !text-lg !font-bold !text-gray-800;
+}
+.fc .fc-daygrid-day-number {
+  @apply !text-sm !text-gray-700;
+}
+.fc .fc-day-today {
+  @apply !bg-blue-50;
+}
+.fc .fc-event {
+  @apply !border-none !rounded !text-xs !font-medium cursor-pointer;
+}
+
+/* TipTap editor styles */
+.ProseMirror {
+  @apply outline-none min-h-[400px] p-4;
+}
+.ProseMirror p.is-editor-empty:first-child::before {
+  @apply text-gray-400;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+.ProseMirror h1 { @apply text-2xl font-bold mb-2 mt-4; }
+.ProseMirror h2 { @apply text-xl font-semibold mb-2 mt-3; }
+.ProseMirror h3 { @apply text-lg font-medium mb-1 mt-2; }
+.ProseMirror p { @apply mb-2 leading-relaxed; }
+.ProseMirror ul { @apply list-disc ml-4 mb-2; }
+.ProseMirror ol { @apply list-decimal ml-4 mb-2; }
+.ProseMirror strong { @apply font-bold; }
+.ProseMirror em { @apply italic; }
+.ProseMirror code { @apply bg-gray-100 rounded px-1 font-mono text-sm; }
+.ProseMirror blockquote { @apply border-l-4 border-gray-300 pl-4 text-gray-600 my-2; }
