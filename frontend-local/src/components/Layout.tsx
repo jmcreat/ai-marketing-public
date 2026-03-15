@@ -1,10 +1,11 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { Users, Calendar, FileText } from 'lucide-react'
+import { Users, Calendar, FileText, Settings } from 'lucide-react'
 
 const navItems = [
   { to: '/contacts', label: '연락처', icon: Users },
   { to: '/scheduler', label: '스케줄러', icon: Calendar },
   { to: '/memo', label: '메모', icon: FileText },
+  { to: '/settings', label: '설정', icon: Settings },
 ]
 
 export default function Layout() {

@@ -3,6 +3,7 @@ import Layout from './components/Layout'
 import ContactsPage from './pages/Contacts'
 import SchedulerPage from './pages/Scheduler'
 import MemoPage from './pages/Memo'
+import SettingsPage from './pages/Settings'
 import PwaUpdater from './components/PwaUpdater'
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="scheduler" element={<SchedulerPage />} />
           <Route path="memo" element={<MemoPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>
       <PwaUpdater />
