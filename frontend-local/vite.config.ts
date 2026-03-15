@@ -3,8 +3,7 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // GitHub Pages 배포 시 레포지토리 이름을 base로 설정
-// 예: https://jmcreat.github.io/ai-marketing/ → base: '/ai-marketing/'
-const base = process.env.GITHUB_PAGES ? '/ai-marketing/' : '/'
+const base = process.env.GITHUB_PAGES ? '/ai-marketing-public/' : '/'
 
 export default defineConfig({
   base,
